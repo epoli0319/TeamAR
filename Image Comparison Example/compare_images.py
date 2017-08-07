@@ -43,20 +43,20 @@ def compare_images(imageA, imageB, title):
 
 # load the images -- the original, the original + contrast,
 # and the original + photoshop
-original = cv2.imread("/Users/shlomi1/Downloads/test_images/statueofliberty.png")
-contrast = cv2.imread("/Users/shlomi1/Downloads/test_images/statueofliberty2.png")
-different = cv2.imread("/Users/shlomi1/Downloads/test_images/statueofliberty3.png")
+sol1 = cv2.imread("statueofliberty.png")
+sol2 = cv2.imread("statueofliberty2.png")
+sol3 = cv2.imread("statueofliberty3.png")
 
 
 
 # convert the images to grayscale
-original = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
-contrast = cv2.cvtColor(contrast, cv2.COLOR_BGR2GRAY)
-different = cv2.cvtColor(different, cv2.COLOR_BGR2GRAY)
+sol1 = cv2.cvtColor(sol1, cv2.COLOR_BGR2GRAY)
+sol2 = cv2.cvtColor(sol2, cv2.COLOR_BGR2GRAY)
+sol3 = cv2.cvtColor(sol3, cv2.COLOR_BGR2GRAY)
 
 # initialize the figure
 fig = plt.figure("Images")
-images = ("Original", original), ("Contrast", contrast), ("Photoshopped", different)
+images = ("Statue of Liberty 1", sol1), ("Statue of Liberty 2", sol2), ("Statue of Liberty 3", sol3)
  
 # loop over the images
 for (i, (name, image)) in enumerate(images):
@@ -70,6 +70,6 @@ for (i, (name, image)) in enumerate(images):
 plt.show()
  
 # compare the images
-compare_images(original, original, "Original vs. Original")
-compare_images(original, contrast, "Original vs. Contrast")
-compare_images(original, different, "Original vs. Different")
+compare_images(sol1, sol1, "Statue of Liberty 1 vs. Statue of Liberty 1")
+compare_images(sol1, sol2, "Statue of Liberty 1 vs. Statue of Liberty 2")
+compare_images(sol1, sol3, "Statue of Liberty 1 vs. Statue of Liberty 3")
