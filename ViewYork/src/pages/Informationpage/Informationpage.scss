@@ -1,35 +1,48 @@
-page-OpeningPage {
+page-Informationpage {
   .body {
-    background-color: #66d9ff;
-    font-family: sans-serif, monospace, Arial;
-    font-weight: bold;
-    color: #ffffff;
+  	font-family: Arial ;
+  	color: #bfbfbf;
+  	background-color: #66d9ff;
+    text-align:center;
   }
-  .header{
-    background-color: #66d9ff;
-    font-family: sans-serif, monospace, Arial;
-    color: #ffffff;
-    font-size: 50px;
-  }
-
-  .b1 {
-    color: #bfbfbf;
+  .h2 {
+  	font-family: Arial, sans-serif, monospace ;
+  	color: #ffffff ;
+    }
+  .c1 {
+  	color: #bfbfbf;
   	background-color: #ffffff;
   	font-family: arial, sans-serif, monospace ;
   	height: 75px;
     	width: 75px;
     	border-radius: 100%;
-    	border: 1px #ffffff;
-
-  }
-
-  .b2 {
-  color: #bfbfbf;
-  background-color: #ffffff;
-  font-family: arial, sans-serif, monospace ;
-  height: 75px;
-    width: 75px;
-    border-radius: 100%;
-    border: 1px #ffffff;
-  }
+    	border: 1px #ffffff; }
+  .c2 {
+  	color: #bfbfbf;
+  	background-color: #ffffff;
+  	height: 75px;
+    	width: 75px;
+    	border-radius: 100%;
+    	border: 1px #ffffff; }
+  .c3 {
+  	color: #bfbfbf;
+  	background-color: #ffffff;
+  	height: 75px;
+    	width: 75px;
+   	border-radius: 100%;
+   	border: 1px #ffffff; }
+  .c4 {
+  	color: #bfbfbf;
+  	background-color: #ffffff;
+  	height: 75px;
+    	width: 75px;
+    	border-radius: 100%;
+    	border: 1px #ffffff;}
+  .c5 {
+  	color: #bfbfbf;
+  	background-color: #ffffff;
+  	height: 75px;
+    	width: 75px;
+    	border-radius: 100%;
+    	border: 1px #ffffff;}
 }

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-OpeningPage',
-  templateUrl: 'OpeningPage.html'
+  selector: 'page-Informationpage',
+  templateUrl: 'Informationpage.html'
 })
 export class HomePage {
 
