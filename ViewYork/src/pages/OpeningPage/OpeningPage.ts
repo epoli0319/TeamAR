@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {visited} from '../visited/visited'
 import {Camera} from '../Camera/Camera'
 
 @Component({
@@ -12,11 +13,11 @@ export class OpeningPage {
 
   }
 
-  showVisitedPage() {
-      this.navCtrl.push(visited);
+    showvisited() {
+        this.navCtrl.push(visited);
   }
-  showCameraPage() {
-      this.navCtrl.push(Camera);
+    showCameraPage() {
+        this.navCtrl.push(Camera);
   }
 
 }

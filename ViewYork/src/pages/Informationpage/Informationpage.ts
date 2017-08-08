@@ -13,7 +13,7 @@ import {FunFacts} from '../FunFacts/FunFacts';
   templateUrl: 'Informationpage.html'
 })
 export class Informationpage {
-
+  items: any;
   constructor(public navCtrl: NavController) {
 
   }

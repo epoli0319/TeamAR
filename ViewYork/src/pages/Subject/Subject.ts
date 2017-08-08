@@ -7,7 +7,7 @@ import {Informationpage} from '../Informationpage/Informationpage'
   templateUrl: 'Subject.html'
 })
 export class Subject {
-
+  items: any;
   constructor(public navCtrl: NavController) {
 
   }
