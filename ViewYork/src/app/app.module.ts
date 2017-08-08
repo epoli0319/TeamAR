@@ -14,8 +14,6 @@ import { FunFacts } from '../pages/FunFacts/FunFacts';
 import { Artist } from '../pages/Artist/Artist';
 import { Subject } from '../pages/Subject/Subject';
 import { Why } from '../pages/Why/Why';
-import { CameraPage } from '../pages/CameraPage/CameraPage';
-
 
 @NgModule({
   declarations: [
@@ -28,7 +26,6 @@ import { CameraPage } from '../pages/CameraPage/CameraPage';
     Artist,
     Subject,
     Why,
-    CameraPage,
 
   ],
   imports: [
@@ -46,7 +43,7 @@ import { CameraPage } from '../pages/CameraPage/CameraPage';
     Artist,
     Subject,
     Why,
-    CameraPage,
+
   ],
   providers: [
     StatusBar,
