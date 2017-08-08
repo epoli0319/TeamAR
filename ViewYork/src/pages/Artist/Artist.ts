@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {Artist} from '../Artist/Artist'
+import {Informationpage} from '../Informationpage/Informationpage'
 
 @Component({
   selector: 'page-Artist',
@@ -12,8 +12,8 @@ export class Artist {
 
   }
 
-  showVisitedPage() {
-      this.navCtrl.push(visited);
+  showInformationPage() {
+      this.navCtrl.push(Informationpage);
   }
 
 }
