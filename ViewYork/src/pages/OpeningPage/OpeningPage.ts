@@ -15,7 +15,5 @@ export class OpeningPage {
   showVisitedPage() {
       this.navCtrl.push(visited);
   }
-  showCameraPage() {
-      this.navCtrl.push(Camera);
-  }
+  
 }
