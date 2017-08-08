@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {visited} from '../visited/visited'
+import {Informationpage} from '../Informationpage/Informationpage'
 
 @Component({
   selector: 'page-Why',
@@ -12,7 +12,7 @@ export class Why {
 
   }
 
-  showVisitedPage() {
-      this.navCtrl.push(visited);
+  showInformationpage() {
+      this.navCtrl.push(Informationpage);
   }
 }
