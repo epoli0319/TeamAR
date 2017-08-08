@@ -9,6 +9,10 @@ import { OpeningPage } from '../pages/OpeningPage/OpeningPage';
 import { visited } from '../pages/visited/visited';
 import { Informationpage } from '../pages/Informationpage/Informationpage';
 import { Location } from '../pages/Location/Location';
+import { Funfacts } from '../pages/Funfacts/Funfacts';
+import { Artist } from '../pages/Artist/Artist';
+import { Subject } from '../pages/Subject/Subject';
+import { Why } from '../pages/Why/Why';
 
 
 
@@ -19,6 +23,10 @@ import { Location } from '../pages/Location/Location';
     visited,
     Informationpage
     Location
+    Funfacts
+    Artist
+    Subject
+    Why
 
   ],
   imports: [
@@ -32,6 +40,10 @@ import { Location } from '../pages/Location/Location';
     visited,
     Informationpage
     Location
+    Funfacts
+    Artist
+    Subject
+    Why
   ],
   providers: [
     StatusBar,
