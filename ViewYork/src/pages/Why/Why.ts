@@ -3,10 +3,10 @@ import { NavController } from 'ionic-angular';
 import {visited} from '../visited/visited'
 
 @Component({
-  selector: 'page-OpeningPage',
-  templateUrl: 'OpeningPage.html'
+  selector: 'page-Why',
+  templateUrl: 'Why.html'
 })
-export class OpeningPage {
+export class Why {
   items: any;
   constructor(public navCtrl: NavController) {
 
@@ -15,5 +15,5 @@ export class OpeningPage {
   showVisitedPage() {
       this.navCtrl.push(visited);
   }
-  
+
 }
