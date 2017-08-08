@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {visited} from '../visited/visited'
+import {Informationpage} from '../Informationpage/Informationpage'
 
 @Component({
   selector: 'page-Location',
@@ -12,8 +12,8 @@ export class Location {
 
   }
 
-  showVisitedPage() {
-      this.navCtrl.push(visited);
+  showInformationPage() {
+      this.navCtrl.push(Informationpage);
   }
 
 }
