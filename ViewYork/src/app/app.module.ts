@@ -9,7 +9,7 @@ import { OpeningPage } from '../pages/OpeningPage/OpeningPage';
 import { visited } from '../pages/visited/visited';
 import { Informationpage } from '../pages/Informationpage/Informationpage';
 import { Location } from '../pages/Location/Location';
-import { FunFacts } from '../pages/Funfacts/Funfacts';
+import { FunFacts } from '../pages/FunFacts/FunFacts';
 import { Artist } from '../pages/Artist/Artist';
 import { Subject } from '../pages/Subject/Subject';
 import { Why } from '../pages/Why/Why';
