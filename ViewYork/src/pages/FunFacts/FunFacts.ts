@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { OpeningPage } from '../OpeningPage/OpeningPage'
+import {Informationpage} from '../Informationpage/Informationpage'
 
 @Component({
   selector: 'page-FunFacts',
@@ -11,7 +11,7 @@ export class FunFacts {
   constructor(public navCtrl: NavController) {
 
   }
-  showOpeningPage() {
-      this.navCtrl.push(OpeningPage);
+  showInformationpage() {
+      this.navCtrl.push(Informationpage);
   }
 }
