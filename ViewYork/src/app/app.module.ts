@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Camera } from '@ionic-native/camera'
 
 import { MyApp } from './app.component';
 import { OpeningPage } from '../pages/OpeningPage/OpeningPage';
@@ -13,7 +14,7 @@ import { FunFacts } from '../pages/FunFacts/FunFacts';
 import { Artist } from '../pages/Artist/Artist';
 import { Subject } from '../pages/Subject/Subject';
 import { Why } from '../pages/Why/Why';
-import { Camera } from '../pages/Camera/Camera';
+import { CameraPage } from '../pages/CameraPage/CameraPage';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { Camera } from '../pages/Camera/Camera';
     Artist,
     Subject,
     Why,
-    Camera,
+    CameraPage,
 
   ],
   imports: [
@@ -45,11 +46,11 @@ import { Camera } from '../pages/Camera/Camera';
     Artist,
     Subject,
     Why,
-    Camera,
+    CameraPage,
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen, Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
