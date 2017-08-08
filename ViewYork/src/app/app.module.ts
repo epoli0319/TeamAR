@@ -13,7 +13,7 @@ import { Funfacts } from '../pages/Funfacts/Funfacts';
 import { Artist } from '../pages/Artist/Artist';
 import { Subject } from '../pages/Subject/Subject';
 import { Why } from '../pages/Why/Why';
-
+import { Camera } from '../pages/Camera/Camera';
 
 
 @NgModule({
@@ -27,6 +27,7 @@ import { Why } from '../pages/Why/Why';
     Artist,
     Subject,
     Why,
+    Camera,
 
   ],
   imports: [
@@ -44,6 +45,7 @@ import { Why } from '../pages/Why/Why';
     Artist,
     Subject,
     Why,
+    Camera,
   ],
   providers: [
     StatusBar,
