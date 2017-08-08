@@ -39,6 +39,5 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       }, (err) => {
       //Handle error
       });
-state.go('Askuser')
   }
 }
