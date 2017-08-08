@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import {Informationpage} from '../Informationpage/Informationpage'
 
 @Component({
-  selector: 'page-Subjectpage',
+  selector: 'page-Subject',
   templateUrl: 'Subject.html'
 })
 export class Subject {
