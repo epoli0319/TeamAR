@@ -21,12 +21,12 @@ import { Why } from '../pages/Why/Why';
     MyApp,
     OpeningPage,
     visited,
-    Informationpage
-    Location
-    Funfacts
-    Artist
-    Subject
-    Why
+    Informationpage,
+    Location,
+    Funfacts,
+    Artist,
+    Subject,
+    Why,
 
   ],
   imports: [
@@ -38,12 +38,12 @@ import { Why } from '../pages/Why/Why';
     MyApp,
     OpeningPage,
     visited,
-    Informationpage
-    Location
-    Funfacts
-    Artist
-    Subject
-    Why
+    Informationpage,
+    Location,
+    Funfacts,
+    Artist,
+    Subject,
+    Why,
   ],
   providers: [
     StatusBar,
