@@ -6,16 +6,31 @@ page-Askuser {
     color: #ffffff;
     text-align: center;
   }
-  .h1{
+  .header{
+    background-color: #66d9ff;
     font-family: sans-serif, monospace, Arial;
     color: #ffffff;
-    text-align: center;
+    font-size: 60px;
   }
-  .d1{
-    background-color: #ffffff;
+
+  .q1 {
     color: #bfbfbf;
-    display: block;
-      margin-left: auto;
-      margin-right: auto;
+  	background-color: #ffffff;
+  	font-family: arial, sans-serif, monospace ;
+  	height: 80px;
+    	width: 80px;
+    	border-radius: 100%;
+    	border: 1px #ffffff;
+
+  }
+
+  .q2 {
+  color: #bfbfbf;
+  background-color: #ffffff;
+  font-family: arial, sans-serif, monospace ;
+  height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    border: 1px #ffffff;
   }
 }
