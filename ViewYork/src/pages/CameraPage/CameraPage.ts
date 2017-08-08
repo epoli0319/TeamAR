@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {OpeningPage} from '../OpeningPage/OpeningPage'
-import {Camera, CameraOPtions} from '@ionic-native/camera';
+import {Camera, CameraOptions} from '@ionic-native/camera';
 
 @Component({
   selector: 'page-Camerapage',
