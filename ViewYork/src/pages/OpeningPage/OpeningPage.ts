@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {visited} from '../visited/visited'
 import {Camera, CameraOptions} from '@ionic-native/camera';
+import {Askuser} from '../Askuser/Askuser'
 
 @Component({
   selector: 'page-OpeningPage',
@@ -38,5 +39,6 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       }, (err) => {
       //Handle error
       });
+state.go('Askuser')
   }
 }
