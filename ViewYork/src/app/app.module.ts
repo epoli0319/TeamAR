@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { OpeningPage } from '../pages/OpeningPage/OpeningPage';
 import { visited } from '../pages/visited/visited';
 import { Informationpage } from '../pages/Informationpage/Informationpage';
+import { Location } from '../pages/Location/Location';
 
 
 
@@ -17,6 +18,7 @@ import { Informationpage } from '../pages/Informationpage/Informationpage';
     OpeningPage,
     visited,
     Informationpage
+    Location
 
   ],
   imports: [
@@ -29,6 +31,7 @@ import { Informationpage } from '../pages/Informationpage/Informationpage';
     OpeningPage,
     visited,
     Informationpage
+    Location
   ],
   providers: [
     StatusBar,
