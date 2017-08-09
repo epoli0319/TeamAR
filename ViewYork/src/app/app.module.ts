@@ -14,6 +14,8 @@ import { FunFacts } from '../pages/FunFacts/FunFacts';
 import { Artist } from '../pages/Artist/Artist';
 import { Subject } from '../pages/Subject/Subject';
 import { Why } from '../pages/Why/Why';
+import { Askuser } from '../pages/Askuser/Askuser';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { Why } from '../pages/Why/Why';
     Artist,
     Subject,
     Why,
+    Askuser,
 
   ],
   imports: [
@@ -43,6 +46,7 @@ import { Why } from '../pages/Why/Why';
     Artist,
     Subject,
     Why,
+    Askuser,
 
   ],
   providers: [
