@@ -6,9 +6,7 @@ page-Artist {
     color: #ffffff;
     text-align: center;
   }
-  .h1{
-    font-family: sans-serif, monospace, Arial;
-    color: #ffffff;
+  .everything{
     text-align: center;
   }
   .d1{
@@ -17,5 +15,8 @@ page-Artist {
     display: block;
       margin-left: auto;
       margin-right: auto;
+  }
+.artist{
+  font-size: 50px;
   }
 }
