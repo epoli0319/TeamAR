@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import {visited} from '../visited/visited'
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import {Askuser} from '../Askuser/Askuser';
@@ -36,13 +36,9 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.photo.push(base64Image);
       this.photo.reverse();
-      this.navCtrl.push(Askuser);
       }, (err) => {
       //Handle error
       });
-  }
-
-  showAskuser() {
     this.navCtrl.push(Askuser);
   }
 
