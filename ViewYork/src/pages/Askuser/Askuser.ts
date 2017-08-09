@@ -38,5 +38,6 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       }, (err) => {
       //Handle error
       });
+    this.navCtrl.push(Askuser);
   }
 }
