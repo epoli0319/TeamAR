@@ -4,12 +4,13 @@
   <img src="http://freeflaticons.com/wp-content/uploads/2014/09/statue-of-liberty-14100927854gkn8.png" alt="Statue of Liberty" style="width:75px;height:75px;"><br />
   <p class="h1">Visited Statues </p><br />
   <ion-list [virtualScroll]="items">
-    <ion-item *virtualItem="let item"> <button class=a1> {{ item }}</button> </ion-item> <br />
-    <ion-item *virtualItem="let item"> <button class=a2> {{ item }}</button> </ion-item> <br />
-    <ion-item *virtualItem="let item"> <button class=a1> {{ item }}</button> </ion-item> <br />
-    <ion-item *virtualItem="let item"> <button class=a2> {{ item }}</button> </ion-item> <br />
-    <ion-item *virtualItem="let item"> <button class=a2> {{ item }}</button> </ion-item> <br />
-    <ion-item *virtualItem="let item"> <button class=a2> {{ item }}</button> </ion-item> <br />
+    <ion-item> <button class=a1> </button> </ion-item> <br />
+    <ion-item> <button class=a2> </button> </ion-item> <br />
+    <ion-item> <button class=a1> </button> </ion-item> <br />
+    <ion-item> <button class=a2> </button> </ion-item> <br />
+    <ion-item> <button class=a2> </button> </ion-item> <br />
+    <ion-item> <button class=a2> </button> </ion-item> <br />
   </ion-list>
+  <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
 </body>
 </ion-content>
