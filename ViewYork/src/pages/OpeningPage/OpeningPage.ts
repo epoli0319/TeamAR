@@ -36,10 +36,10 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.photo.push(base64Image);
       this.photo.reverse();
+      this.navCtrl.push(Askuser);
       }, (err) => {
       //Handle error
       });
-      this.navCtrl.push(Askuser);
   }
 
 }
