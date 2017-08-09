@@ -12,7 +12,7 @@ export class Location {
 
   }
 
-  showInformationPage() {
+  showInformationpage() {
       this.navCtrl.push(Informationpage);
   }
 

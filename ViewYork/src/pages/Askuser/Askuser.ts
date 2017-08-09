@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import {Informationpage} from '../Informationpage/Informationpage'
 import {Camera, CameraOptions} from '@ionic-native/camera';
 
