@@ -8,16 +8,14 @@ import { OpeningPage } from '../OpeningPage/OpeningPage'
 })
 export class visited {
   items: any;
-
-  items: string[]
+  statues: string[];
 
   constructor(public navCtrl: NavController) {
-     this.initializeItems();
   }
   showOpeningPage() {
       this.navCtrl.push(OpeningPage);
   }
-  AddItems() {
-  //function to add visited pages to empty string called items. Items starts empty
+  AddStatues() {
+  //function to add visited pages to empty string called statues. Items starts empty
   }
 }
