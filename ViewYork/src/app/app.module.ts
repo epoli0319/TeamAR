@@ -15,6 +15,7 @@ import { Artist } from '../pages/Artist/Artist';
 import { Subject } from '../pages/Subject/Subject';
 import { Why } from '../pages/Why/Why';
 import { Askuser } from '../pages/Askuser/Askuser';
+import { Photos } from '../pages/Photos/Photos';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { Askuser } from '../pages/Askuser/Askuser';
     Subject,
     Why,
     Askuser,
+    Photos,
 
   ],
   imports: [
@@ -47,6 +49,7 @@ import { Askuser } from '../pages/Askuser/Askuser';
     Subject,
     Why,
     Askuser,
+    Photos,
 
   ],
   providers: [
