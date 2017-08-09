@@ -4,14 +4,9 @@ page-FunFacts {
     font-family: sans-serif, monospace, Arial;
     font-weight: bold;
     color: #ffffff;
-    text-align: center;
   }
-  .h1{
-    font-family: sans-serif, monospace, Arial;
-    color: #ffffff;
+  .everything{
     text-align: center;
-
-
   }
   .d1{
     background-color: #ffffff;
@@ -20,4 +15,7 @@ page-FunFacts {
       margin-left: auto;
       margin-right: auto;
     }
+  .funfacts{
+    font-size: 50px;
+  }
 }

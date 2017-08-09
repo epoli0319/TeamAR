@@ -4,14 +4,11 @@ page-Location {
     font-family: sans-serif, monospace, Arial;
     font-weight: bold;
     color: #ffffff;
-    text-align: center;
-  }
-  .h1{
-    font-family: sans-serif, monospace, Arial;
-    color: #ffffff;
-    text-align: center;
 
-  }
+.everything{
+  text-align: center;
+}
+
   .d1{
     background-color: #ffffff;
     color: #bfbfbf;
@@ -19,4 +16,7 @@ page-Location {
       margin-left: auto;
       margin-right: auto;
   }
+.location{
+  font-size: 50px;
+}
 }
