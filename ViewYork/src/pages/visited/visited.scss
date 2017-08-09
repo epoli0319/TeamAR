@@ -9,6 +9,8 @@ page-visited {
 .h1{
   font-family: sans-serif, monospace, Arial;
   color: #ffffff;
+  font-size: 25px;
+  text-align: center;
 }
 .a1 {
   background-color: #ffffff;
@@ -16,6 +18,7 @@ page-visited {
   font-family: sans-serif, monospace, Arial;
   height: 20px;
   width: 70px;
+  align-items: center;
 }
 .a2 {
   background-color: #ffffff;
@@ -23,5 +26,9 @@ page-visited {
   font-family: sans-serif, monospace, Arial;
   height: 20px;
   width: 70px;
+  align-items:center;
+}
+.a3 {
+  text-align: left;
 }
 }
