@@ -4,12 +4,14 @@ page-Subject {
     font-family: sans-serif, monospace, Arial;
     font-weight: bold;
     color: #ffffff;
+  }
+  .everything {
     text-align: center;
   }
   .h1{
     font-family: sans-serif, monospace, Arial;
     color: #ffffff;
-    text-align: center;
+    font-size: 40px;
   }
   .d1{
     background-color: #ffffff;
@@ -18,5 +20,7 @@ page-Subject {
       margin-left: auto;
       margin-right: auto;
   }
-
+.subject {
+  font-size: 30px;
+}
 }
