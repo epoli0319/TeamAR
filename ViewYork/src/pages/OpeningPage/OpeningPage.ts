@@ -30,7 +30,6 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
-    this.navCtrl.push(Askuser);
     }
 
     this.camera.getPicture(options).then((imageData) => {
@@ -40,6 +39,7 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       }, (err) => {
       //Handle error
       });
+      this.navCtrl.push(Askuser);
   }
 
 }
