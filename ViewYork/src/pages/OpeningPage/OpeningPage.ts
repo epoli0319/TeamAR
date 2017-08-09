@@ -25,7 +25,6 @@ constructor(public navCtrl: NavController, private camera: Camera) {
   }
 
   takePhoto() {
-    this.navCtrl.push(Askuser);
     const options: CameraOptions = {
       quality: 50,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -41,6 +40,10 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       }, (err) => {
       //Handle error
       });
+  }
+
+  showAskuser() {
+    this.navCtrl.push(Askuser);
   }
 
 }
