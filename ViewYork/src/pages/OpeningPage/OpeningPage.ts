@@ -42,34 +42,6 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   	  });
   	}
 
-  uploadFile() {
-       var fileURL = "correctPath"
-       var uri = encodeURI("https://viewyorkpic.s3.amazonaws.com");
-       var options = new FileUploadOptions();
-       options.fileKey = "file";
-       options.fileName = fileURL.substr(fileURL.lastIndexOf('/')+1);
-       options.mimeType = "text/plain";
-
-       var headers = {'headerParam':'headerValue'};
-       options.headers = headers;
-       var ft = new FileTransfer();
-       ft.upload(fileURL, uri, onSuccess, onError, options);
-
-       function onSuccess(r) {
-          console.log("Code = " + r.responseCode);
-          console.log("Response = " + r.response);
-          console.log("Sent = " + r.bytesSent);
-       }
-
-       function onError(error) {
-          alert("An error has occurred: Code = " + error.code);
-          console.log("upload error source " + error.source);
-          console.log("upload error target " + error.target);
-       }
-
-    }
-    }
-
   takePhoto() {
     const options: CameraOptions = {
       quality: 50,
@@ -93,7 +65,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
        			//.then(filePath => {
        		var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
        		var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
-          uploadFile()
+          FileTransfer(viewyorkpic.s3.amazonaws.com,{},{},correctPath,"PhotosOfStatues")
        		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
        	}, (err) => {
        		this.presentToast('Error');
@@ -101,7 +73,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
       this.navCtrl.push(Askuser)
       }
   // Create a new name for the image
-  	 createFileName() {
+  	private createFileName() {
   	  var d = new Date(),
   	  n = d.getTime(),
   	  newFileName =  n + ".jpg";
@@ -109,7 +81,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   	}
 
 
-   presentToast(text) {
+  	private presentToast(text) {
   	  let toast = this.toastCtrl.create({
   	    message: text,
   	    duration: 3000,
@@ -119,7 +91,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   	}
 
   	// Always get the accurate path to your apps folder
-  	 pathForImage(img) {
+  	public pathForImage(img) {
   	  if (img === null) {
   	    return '';
   	  } else {
