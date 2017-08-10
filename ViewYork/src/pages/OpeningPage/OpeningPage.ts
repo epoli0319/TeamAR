@@ -33,16 +33,16 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
       mediaType: this.camera.MediaType.PICTURE
     }
 
-    this.camera.getPicture(options).then((imageData) => {
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
+    this.camera.getPicture(options).then((imageaPath) => {
+      let base64Image = 'data:image/jpeg;base64,' + imagePath;
       this.photo.push(base64Image);
       this.photo.reverse();
       }, (err) => {
       //Handle error
       });
-      var currentName = imageData.substr(imageData.lastIndexOf('/')+1);
-     	var correctPath = imageData.substr(0, imageData.lastIndexOf('/')+1);
-      /** uploadFile(s3.us-east-2.amazonaws.com/viewyorkpic/, {}, {}, correctPath, "anything"); */ 
+      var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
+     	var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
+      /** uploadFile(s3.us-east-2.amazonaws.com/viewyorkpic/, {}, {}, correctPath, "anything"); */
     this.navCtrl.push(Askuser)
   }
 
