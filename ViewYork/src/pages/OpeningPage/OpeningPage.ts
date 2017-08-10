@@ -26,6 +26,8 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   this.images = [];
 }
 
+const fileTransfer: FileTransferObject = this.transfer.create();
+
   showvisited() {
       this.navCtrl.push(visited);
   }
