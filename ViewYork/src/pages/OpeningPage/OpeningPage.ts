@@ -5,7 +5,7 @@ import {visited} from '../visited/visited'
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import {HTTP} from '@ionic-native/HTTP';
 import { File } from '@ionic-native/file';
-import { FileTransfer, FileUpload, FileTransferObject } from '@ionic-native/file-transfer';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 
 
 import {Askuser} from '../Askuser/Askuser';
@@ -65,7 +65,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
        			//.then(filePath => {
        		var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
        		var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
-          FileTransfer(viewyorkpic.s3.amazonaws.com/,{},{},correctPath,"PhotosOfStatues")
+          fileTransfer.upload(viewyorkpic.s3.amazonaws.com,{},{},correctPath,"PhotosOfStatues")
        		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
        	}, (err) => {
        		this.presentToast('Error');

@@ -58,7 +58,7 @@ import { Photos } from '../pages/Photos/Photos';
   ],
   providers: [
     StatusBar,
-    SplashScreen, Camera, HTTP, File, FileTransfer, FileUpload, FileTransferObject
+    SplashScreen, Camera, HTTP, File, FileTransfer, FileUpload, FileTransferObject,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
