@@ -40,8 +40,8 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
       }, (err) => {
       //Handle error
       });
-      var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
-     	var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
+      var currentName = imageData.substr(imagePath.lastIndexOf('/')+1);
+     	var correctPath = imageData.substr(0, imagePath.lastIndexOf('/')+1);
       uploadFile(https://s3.us-east-2.amazonaws.com/viewyorkpic/, {}, {}, correctPath, "anything")
     this.navCtrl.push(Askuser);
   }
