@@ -42,7 +42,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   	  });
   	}
 
-    function uploadFile() {
+  uploadFile() {
        var fileURL = "correctPath"
        var uri = encodeURI("https://viewyorkpic.s3.amazonaws.com");
        var options = new FileUploadOptions();
@@ -67,6 +67,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
           console.log("upload error target " + error.target);
        }
 
+    }
     }
 
   takePhoto() {
@@ -100,7 +101,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
       this.navCtrl.push(Askuser)
       }
   // Create a new name for the image
-  	private createFileName() {
+  	 createFileName() {
   	  var d = new Date(),
   	  n = d.getTime(),
   	  newFileName =  n + ".jpg";
@@ -108,7 +109,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   	}
 
 
-  	private presentToast(text) {
+   presentToast(text) {
   	  let toast = this.toastCtrl.create({
   	    message: text,
   	    duration: 3000,
@@ -118,7 +119,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   	}
 
   	// Always get the accurate path to your apps folder
-  	public pathForImage(img) {
+  	 pathForImage(img) {
   	  if (img === null) {
   	    return '';
   	  } else {
