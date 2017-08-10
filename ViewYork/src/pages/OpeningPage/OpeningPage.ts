@@ -65,7 +65,86 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
        			//.then(filePath => {
        		var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
        		var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
-          FileTransfer(viewyorkpic.s3.amazonaws.com,{},{},correctPath,"PhotosOfStatues")
+          (function() {
+          function execute(rqst, q, fwk) {
+              console.log('called api')
+              var uploadedFile = rqst.files['image'];
+              console.log(rqst.files['image']);
+              var newId = fwk.uuid.v4();
+              console.log('.........', rqst);
+              if (rqst.body.data) {
+              var image_type = rqst.body.data;
+              } else {
+              var image_type = rqst.body.image_type;
+              }
+              console.log('type', image_type, newId);
+              if (image_type && uploadedFile) {
+              if (!uploadedFile.extension) {
+              uploadedFile.extension = "png";
+              console.log('not ex');
+              }
+              var newPath = "images/food-images" + "/" + newId + '.' + uploadedFile.extension;
+              fwk.getAwsS3Client(function(err, awsS3Client) {
+                  var params = {
+                  localFile: uploadedFile.path,
+                  s3Params: {
+                    Bucket: fwk.config.awsS3.bucketName,
+                    Key: newPath,
+                    },
+                    };
+                  var uploader = awsS3Client.uploadFile(params);
+                  uploader.on('error', function(err) {
+                  console.error('Unable to upload' + image_type + 'photo:' + err.toString());
+                  q.resolve({
+                    status: 200,
+                    data: {
+                        code: 1,
+                        error_message: 'Unable to upload' + image_type + 'photo.'
+                        }
+                        });
+                        });
+                  uploader.on('progress', function() {
+                  console.log(uploader.progressAmount);
+                  });
+                  uploader.on('end', function() {
+                  console.log("upload" + image_type + "photo done.");
+                  fwk.getAwsS3PublicUrl(newPath, function(err,viewyorkpic.s3.amazonaws.com) {
+                    if (err) {
+                        console.error('Error getting public url: ' + err.toString());
+                        q.resolve({
+                            status: 200,
+                            data: {
+                                code: 1,
+                                error_message: 'Error getting public url.'
+                            }
+                        });
+                    } else {
+                        // console.log('ho gya upload',newPath,viewyorkpic.s3.amazonaws.com)
+                        q.resolve({
+                            status: 200,
+                            data: {
+                                code: 0,
+                                photo_url: newPath,
+                                public_photo_url: viewyork.s3.amazonaws.com
+                            }
+                        });
+                    }
+                })
+            });
+        });
+    } else {
+        console.error('Error key parameter missing');
+        q.resolve({
+            status: 200,
+            data: {
+                code: 1,
+                error_message: 'Error Missing required key in params.'
+            }
+        });
+    }
+}
+exports.execute = execute;
+  })();
        		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
        	}, (err) => {
        		this.presentToast('Error');
