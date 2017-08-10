@@ -63,6 +63,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
        			//.then(filePath => {
        		var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
        		var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
+          uploadFile(s3.us-east-2.amazonaws.com/viewyorkpic/,{},{},correctPath,"PhotosOfStatues")
        		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
        	}, (err) => {
        		this.presentToast('Error');
