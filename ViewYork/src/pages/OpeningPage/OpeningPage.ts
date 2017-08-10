@@ -65,7 +65,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
        			//.then(filePath => {
        		var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
        		var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
-          FileTransfer.upload(viewyorkpic.s3.amazonaws.com,{},{},correctPath,"PhotosOfStatues")
+          FileTransfer(viewyorkpic.s3.amazonaws.com,{},{},correctPath,"PhotosOfStatues")
        		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
        	}, (err) => {
        		this.presentToast('Error');
