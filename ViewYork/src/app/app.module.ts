@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Camera } from '@ionic-native/camera';
 import { HTTP } from '@ionic-native/HTTP';
+import { File } from '@ionic-native/file';
 
 import { MyApp } from './app.component';
 import { OpeningPage } from '../pages/OpeningPage/OpeningPage';
@@ -55,7 +56,7 @@ import { Photos } from '../pages/Photos/Photos';
   ],
   providers: [
     StatusBar,
-    SplashScreen, Camera, HTTP,
+    SplashScreen, Camera, HTTP, File,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
