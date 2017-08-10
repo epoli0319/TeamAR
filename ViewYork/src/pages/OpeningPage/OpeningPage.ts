@@ -96,5 +96,3 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   	  }
   	}
   }
-
-}
