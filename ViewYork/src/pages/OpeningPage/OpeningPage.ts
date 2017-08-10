@@ -5,7 +5,7 @@ import {visited} from '../visited/visited'
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import {HTTP} from '@ionic-native/HTTP';
 import { File } from '@ionic-native/file';
-import { fileTransfer, fileTransferObject } from '@ionic-native/file-transfer';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 
 
 import {Askuser} from '../Askuser/Askuser';
@@ -22,7 +22,7 @@ images: Array<{src: String}>;
 lastImage: string = null;
 public photo: any;
 public base64Image: string;
-constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP, private file: File, public toastCtrl: ToastController, private transfer: fileTransfer) {
+constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP, private file: File, public toastCtrl: ToastController, private transfer: FileTransfer) {
   this.images = [];
 }
 
@@ -65,7 +65,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
        			//.then(filePath => {
        		var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
        		var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
-          fileTransfer.upload(viewyorkpic.s3.amazonaws.com,{},{},correctPath,"PhotosOfStatues")
+          FileTransfer.upload(viewyorkpic.s3.amazonaws.com,{},{},correctPath,"PhotosOfStatues")
        		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
        	}, (err) => {
        		this.presentToast('Error');
