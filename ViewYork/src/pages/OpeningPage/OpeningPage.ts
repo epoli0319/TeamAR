@@ -108,8 +108,8 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
                   });
                   uploader.on('end', function() {
                   console.log("upload" + image_type + "photo done.");
-                  fwk.getAwsS3PublicUrl(newPath, function(err,viewyorkpic.s3.amazonaws.com) {
-                    if (err) {
+                  fwk.getAwsS3PublicUrl(newPath, function(err) {
+                  if (err) {
                         console.error('Error getting public url: ' + err.toString());
                         q.resolve({
                             status: 200,
@@ -119,7 +119,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
                             }
                         });
                     } else {
-                        // console.log('ho gya upload',newPath,viewyorkpic.s3.amazonaws.com)
+                        // console.log('ho gya upload',newPath, viewyorkpic.s3.amazonaws.com)
                         q.resolve({
                             status: 200,
                             data: {
@@ -143,7 +143,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
         });
     }
 }
-exports.execute = execute;
+  execute = execute;
   })();
        		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
        	}, (err) => {
