@@ -42,7 +42,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
       });
       var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
      	var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
-      uploadFile(http://s3.amazonaws.com/bucket/, {}, {}, correctPath, "anything")
+      uploadFile(https://s3.us-east-2.amazonaws.com/viewyorkpic/, {}, {}, correctPath, "anything")
     this.navCtrl.push(Askuser);
   }
 
