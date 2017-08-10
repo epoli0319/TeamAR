@@ -5,6 +5,8 @@ import {visited} from '../visited/visited'
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import {HTTP} from '@ionic-native/HTTP';
 import { File } from '@ionic-native/file';
+import { FileTransfer, FileUpload, FileTransferObject } from '@ionic-native/file-transfer';
+
 
 import {Askuser} from '../Askuser/Askuser';
 
@@ -20,7 +22,7 @@ images: Array<{src: String}>;
 lastImage: string = null;
 public photo: any;
 public base64Image: string;
-constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP, private file: File, public toastCtrl: ToastController) {
+constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP, private file: File, public toastCtrl: ToastController, private transfer: FileTransfer) {
   this.images = [];
 }
 
