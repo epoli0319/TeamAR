@@ -20,7 +20,7 @@ images: Array<{src: String}>;
 lastImage: string = null;
 public photo: any;
 public base64Image: string;
-constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP, private file: File) {
+constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP, private file: File, public toastCtrl: ToastController) {
   this.images = [];
 }
 
@@ -48,7 +48,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
       mediaType: this.camera.MediaType.PICTURE
     }
 
-    this.camera.getPicture(options).then((imageaData) => {
+    this.camera.getPicture(options).then((imageData) => {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.photo.push(base64Image);
       this.photo.reverse();
