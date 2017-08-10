@@ -125,7 +125,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
                             data: {
                                 code: 0,
                                 photo_url: newPath,
-                                public_photo_url:
+                                public_photo_url: s3.amazonaws.com/viewyorkpic
                             }
                         });
                     }
