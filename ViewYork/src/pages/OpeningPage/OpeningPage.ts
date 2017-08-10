@@ -13,6 +13,8 @@ import {Askuser} from '../Askuser/Askuser';
 })
 export class OpeningPage {
 items: any;
+images: Array<{src: String}>;
+lastImage: string = null;
 public photo: any;
 public base64Image: string;
 constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP, private file: File) {
@@ -20,11 +22,37 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
 }
 
 private copyFileToLocalDir(namePath, currentName, newFileName) {
-	  this.file.copyFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(success => {
+	  this.file.copyFile(namePath, currentName, file.dataDirectory, newFileName).then(success => {
 	    this.lastImage = newFileName;
 	  },(err) => {
     //Handle error
     });
+}
+private createFileName() {
+	  var d = new Date(),
+	  n = d.getTime(),
+	  newFileName =  n + ".jpg";
+	  return newFileName;
+	}
+
+
+	private presentToast(text) {
+	  let toast = this.toastCtrl.create({
+	    message: text,
+	    duration: 3000,
+	    position: 'top'
+	  });
+	  toast.present();
+	}
+
+	// Always get the accurate path to your apps folder
+	public pathForImage(img) {
+	  if (img === null) {
+	    return '';
+	  } else {
+	    return cordova.file.dataDirectory + img;
+	  }
+	}
 
   showvisited() {
       this.navCtrl.push(visited);
