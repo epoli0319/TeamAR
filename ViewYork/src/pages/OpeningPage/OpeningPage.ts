@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {visited} from '../visited/visited'
 import {Camera, CameraOptions} from '@ionic-native/camera';
+import {HTTP} from '@ionic-native/HTTP';
 import {Askuser} from '../Askuser/Askuser';
 
 @Component({
@@ -12,7 +13,7 @@ export class OpeningPage {
 items: any;
 public photo: any;
 public base64Image: string;
-constructor(public navCtrl: NavController, private camera: Camera) {
+constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP) {
 
   }
 
@@ -39,6 +40,9 @@ constructor(public navCtrl: NavController, private camera: Camera) {
       }, (err) => {
       //Handle error
       });
+      var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
+     	var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
+      uploadFile(http://s3.amazonaws.com/bucket/, {}, {}, correctPath, "anything")
     this.navCtrl.push(Askuser);
   }
 
