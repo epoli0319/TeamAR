@@ -125,7 +125,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
                             data: {
                                 code: 0,
                                 photo_url: newPath,
-                                public_photo_url: viewyork.s3.amazonaws.com
+                                public_photo_url: https://viewyorkpic.s3.amazonaws.com
                             }
                         });
                     }
@@ -143,7 +143,6 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
         });
     }
 }
-  execute = execute;
   })();
        		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
        	}, (err) => {
