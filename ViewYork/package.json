@@ -20,7 +20,10 @@
         "@angular/http": "4.1.3",
         "@angular/platform-browser": "4.1.3",
         "@angular/platform-browser-dynamic": "4.1.3",
+<<<<<<< HEAD
         "@ionic-native/camera": "^4.1.0",
+=======
+>>>>>>> 5b14d8809800c5bdf883b1d3f4bb53b6ef2a35c0
         "@ionic-native/core": "3.12.1",
         "@ionic-native/file": "^4.1.0",
         "@ionic-native/file-transfer": "^4.1.0",
@@ -44,8 +47,12 @@
         "node-base64-image": "^1.0.4",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
+<<<<<<< HEAD
         "zone.js": "0.8.12",
         "cordova-plugin-camera": "^2.4.1"
+=======
+        "zone.js": "0.8.12"
+>>>>>>> 5b14d8809800c5bdf883b1d3f4bb53b6ef2a35c0
     },
     "devDependencies": {
         "@ionic/app-scripts": "^2.1.3",
@@ -65,8 +72,12 @@
             "ionic-plugin-keyboard": {},
             "cordova-plugin-http": {},
             "cordova-plugin-file": {},
+<<<<<<< HEAD
             "cordova-plugin-file-transfer": {},
             "cordova-plugin-camera": {}
+=======
+            "cordova-plugin-file-transfer": {}
+>>>>>>> 5b14d8809800c5bdf883b1d3f4bb53b6ef2a35c0
         },
         "platforms": [
             "android",
