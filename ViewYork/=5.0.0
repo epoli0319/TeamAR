@@ -1,0 +1,7 @@
+ViewYork@0.0.1 /Users/Mimi/Documents/TeamAR/TeamAR/ViewYork
+├── ajv@5.2.2 
+└─┬ node-base64-image@1.0.4
+  └─┬ request@2.81.0
+    └─┬ har-validator@4.2.1
+      └── ajv@4.11.8 
+
