@@ -46,7 +46,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   takePhoto() {
     const options: CameraOptions = {
       quality: 50,
-      destinationType: this.camera.DestinationType.DATA_URL,
+      destinationType: 1, // FILE_URI : 1, Return image file URI
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
     }
@@ -54,50 +54,48 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
     this.camera.getPicture(options).then((imagePath) => {
 		     // imageData is either a base64 encoded string or a file URI
 		     // If it's base64:
-     		//let base64Image = 'data:image/jpeg;base64,' + imageData;
-     		// this.filePath.resolveNativePath('../../www/img')
-     			//.then(filePath => {
-     		var currentName = imagePath.substr(imagePath.lastIndexOf('/')+1);
-     		var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/')+1);
-     		this.copyFileToLocalDir(correctPath,currentName,this.createFileName());
+        // let base64Image = 'data:image/jpeg;base64,' + imageData;
 
-    });
+        let alert = this.alertCtrl.create({
+          title: 'Picture taken:',
+          subTitle: imagePath,
+          buttons: ['Dismiss']
+        });
+        alert.present();
 
-    let alert = this.alertCtrl.create({
-      title: 'Picture taken',
-      subTitle: 'Congratulations!',
-      buttons: ['Dismiss']
-    });
-    alert.present();
+        this.http.uploadFile('34.232.228.168', {}, {}, imagePath, "statue")
+        .then(data => {
 
-    this.http.get('http://now.httpbin.org', {}, {})
-    .then(data => {
+          console.log(data.status);
+          console.log(data.data); // data received by server
+          console.log(data.headers);
 
-      console.log(data.status);
-      console.log(data.data); // data received by server
-      console.log(data.headers);
+          let alert = this.alertCtrl.create({
+            title: 'Success',
+            subTitle: data.data,
+            buttons: ['Dismiss']
+          });
+          alert.present();
 
-      let alert = this.alertCtrl.create({
-        title: 'Success',
-        subTitle: data.data,
-        buttons: ['Dismiss']
+        })
+        .catch(error => {
+
+          console.log(error.status);
+          console.log(error.error); // error message as string
+          console.log(error.headers);
+
+          let alert = this.alertCtrl.create({
+            title: error.headers[1],
+            subTitle: error.error,
+            buttons: ['Ok']
+          });
+          alert.present();
+        });
+
+      }, (err) => {
+        // Handle error
       });
-      alert.present();
 
-    })
-    .catch(error => {
-
-      console.log(error.status);
-      console.log(error.error); // error message as string
-      console.log(error.headers);
-
-      let alert = this.alertCtrl.create({
-        title: 'Error',
-        subTitle: error.error,
-        buttons: ['Ok']
-      });
-      alert.present();
-    });
 
     this.navCtrl.push(Askuser)
   }
