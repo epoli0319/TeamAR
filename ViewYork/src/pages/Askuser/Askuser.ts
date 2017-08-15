@@ -24,40 +24,40 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
   this.images = [];
 }
 
-  showstatuename(){
-    this.http.get('url to get info??', {}, {}, imagePath, "file")
-    .then(data => {
+  //showstatuename(){
+    //this.http.get('url to get info??', {}, {}, imagePath, "file")
+    //.then(data => {
 
-      console.log(data.status);
-      console.log(data.data); // data received by server
-      console.log(data.headers);
+  //    console.log(data.status);
+  //    console.log(data.data); // data received by server
+  //    console.log(data.headers);
 
-      //let alert = this.alertCtrl.create({
-      //  title: 'Success',
-      //  subTitle: data.data,
-      //  buttons: ['Dismiss']
-    //  });
-    //  alert.present();
+      ///let alert = this.alertCtrl.create({
+      ///  title: 'Success',
+      ///  subTitle: data.data,
+      ///  buttons: ['Dismiss']
+    ///  });
+    ///  alert.present();
 
-    })
-    .catch(error => {
+  //  })
+  //  .catch(error => {
 
-      console.log(error.status);
-      console.log(error.error); // error message as string
-      console.log(error.headers);
+  //    console.log(error.status);
+  //    console.log(error.error); // error message as string
+  //    console.log(error.headers);
 
-      let alert = this.alertCtrl.create({
-        title: error.headers[1],
-        subTitle: error.error,
-        buttons: ['Ok']
-      });
-      alert.present();
-    });
+    //  let alert = this.alertCtrl.create({
+    //    title: error.headers[1],
+    //    subTitle: error.error,
+  //      buttons: ['Ok']
+  //    });
+  //    alert.present();
+//    });
 
-  }, (err) => {
+  //}, (err) => {
     // Handle error
-  });
-  }
+//  });
+  //}
 
   showInformationPage() {
       this.navCtrl.push(Informationpage);
