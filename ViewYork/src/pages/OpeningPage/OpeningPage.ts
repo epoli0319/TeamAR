@@ -56,12 +56,12 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
 		     // If it's base64:
         // let base64Image = 'data:image/jpeg;base64,' + imageData;
 
-        let alert = this.alertCtrl.create({
-          title: 'Picture taken:',
-          subTitle: imagePath,
-          buttons: ['Dismiss']
-        });
-        alert.present();
+        //let alert = this.alertCtrl.create({
+        //  title: 'Picture taken:',
+        //  subTitle: imagePath,
+        //  buttons: ['Dismiss']
+        //});
+        //alert.present();
 
         this.http.uploadFile('http://34.232.228.168/upload', {}, {}, imagePath, "file")
         .then(data => {
@@ -70,12 +70,12 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
           console.log(data.data); // data received by server
           console.log(data.headers);
 
-          let alert = this.alertCtrl.create({
-            title: 'Success',
-            subTitle: data.data,
-            buttons: ['Dismiss']
-          });
-          alert.present();
+          //let alert = this.alertCtrl.create({
+          //  title: 'Success',
+          //  subTitle: data.data,
+          //  buttons: ['Dismiss']
+        //  });
+        //  alert.present();
 
         })
         .catch(error => {
