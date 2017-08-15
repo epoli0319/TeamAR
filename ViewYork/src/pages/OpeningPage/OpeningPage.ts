@@ -63,7 +63,7 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
         });
         alert.present();
 
-        this.http.uploadFile('34.232.228.168', {}, {}, imagePath, "statue")
+        this.http.uploadFile('http://34.232.228.168/upload', {}, {}, imagePath, "statue")
         .then(data => {
 
           console.log(data.status);
