@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import {Informationpage} from '../Informationpage/Informationpage'
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import {HTTP} from '@ionic-native/http';
 import { File } from '@ionic-native/file';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { ToastController } from 'ionic-angular';
 
 declare var cordova: any;
 
