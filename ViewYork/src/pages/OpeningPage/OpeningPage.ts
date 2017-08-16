@@ -70,13 +70,14 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
           console.log(data.data); // data received by server
           console.log(data.headers);
 
-          //let alert = this.alertCtrl.create({
-          //  title: 'Success',
-          //  subTitle: data.data,
-          //  buttons: ['Dismiss']
-        //  });
-        //  alert.present();
-
+          let alert = this.alertCtrl.create({
+            title: 'Success',
+            subTitle: data.data,
+            buttons: ['Dismiss']
+          });
+          alert.present();
+          this.navCtrl.push(Askuser)
+          
         })
         .catch(error => {
 
@@ -95,9 +96,6 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
       }, (err) => {
         // Handle error
       });
-
-
-    this.navCtrl.push(Askuser)
   }
 
   // Create a new name for the image
