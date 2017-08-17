@@ -2,5 +2,8 @@
   "name": "ViewYork",
   "app_id": "b7fa3615",
   "type": "ionic-angular",
-  "watchPatterns": []
+  "watchPatterns": [],
+  "integrations": {
+    "cordova": {}
+  }
 }

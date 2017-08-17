@@ -5,8 +5,6 @@ import {visited} from '../visited/visited'
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import {HTTP} from '@ionic-native/http';
 import { File } from '@ionic-native/file';
-import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
-
 
 import {Askuser} from '../Askuser/Askuser';
 
@@ -19,11 +17,11 @@ declare var cordova: any;
 export class OpeningPage {
 items: any;
 images: Array<{src: String}>;
-lastImage: string = null;
+lastImage: string = "";
 public photo: any;
 public base64Image: string;
 constructor(public navCtrl: NavController, private camera: Camera, private http: HTTP,
-  private file: File, public toastCtrl: ToastController, private transfer: FileTransfer, private alertCtrl: AlertController) {
+  private file: File, public toastCtrl: ToastController, private alertCtrl: AlertController) {
   this.images = [];
 }
 
@@ -56,26 +54,28 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
 		     // If it's base64:
         // let base64Image = 'data:image/jpeg;base64,' + imageData;
 
-        //let alert = this.alertCtrl.create({
-        //  title: 'Picture taken:',
-        //  subTitle: imagePath,
-        //  buttons: ['Dismiss']
-        //});
-        //alert.present();
-
+        let alert = this.alertCtrl.create({
+         title: 'Picture taken:',
+         subTitle: imagePath,
+         buttons: ['Dismiss']
+        });
+        alert.present();
+        console.log("http starting");
         this.http.uploadFile('http://34.232.228.168/upload', {}, {}, imagePath, "file")
         .then(data => {
-
+          // response.data = data.data;
           console.log(data.status);
           console.log(data.data); // data received by server
           console.log(data.headers);
 
-          //let alert = this.alertCtrl.create({
-          //  title: 'Success',
-          //  subTitle: data.data,
-          //  buttons: ['Dismiss']
-        //  });
-        //  alert.present();
+          let alert = this.alertCtrl.create({
+           title: 'Success',
+           subTitle: data.data,
+           buttons: ['Dismiss']
+          });
+          alert.present();
+
+          this.navCtrl.push(Askuser)
 
         })
         .catch(error => {
@@ -96,8 +96,6 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
         // Handle error
       });
 
-
-    this.navCtrl.push(Askuser)
   }
 
   // Create a new name for the image
