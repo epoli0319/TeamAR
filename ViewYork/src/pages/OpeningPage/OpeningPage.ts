@@ -95,7 +95,6 @@ constructor(public navCtrl: NavController, private camera: Camera, private http:
       }, (err) => {
         // Handle error
       });
-
   }
 
   // Create a new name for the image

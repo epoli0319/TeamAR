@@ -68,7 +68,10 @@
             "cordova-plugin-http": {},
             "cordova-plugin-file": {},
             "cordova-plugin-file-transfer": {},
-            "cordova-plugin-camera": {}
+            "cordova-plugin-camera": {
+                "CAMERA_USAGE_DESCRIPTION": " ",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
+            }
         },
         "platforms": [
             "android",
